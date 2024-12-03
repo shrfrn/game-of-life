@@ -1,0 +1,35 @@
+h1 {
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+}
+
+.btn-container {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+button:active {
+    background-color: lightblue;
+}
+
+table {
+    border: 1px solid black;
+    margin: auto;
+    cursor: pointer;
+}
+
+table td {
+    width: 40px;
+    height: 40px;
+    border: 1px solid black;
+    text-align: center;
+    transition: 500ms;
+}
+
+table td:hover {
+    background-color: lightsteelblue;
+}
+
+.occupied {
+    background-color: lightgray;
+}
