@@ -1,0 +1,59 @@
+h1 {
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+}
+
+.btn-container {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+button:active {
+    background-color: lightblue;
+}
+
+table {
+    border: 1px solid black;
+    margin: auto;
+    cursor: pointer;
+}
+
+.bingo-table td {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: medium;
+    width: 40px;
+    height: 40px;
+    margin: auto;
+    border: 1px solid black;
+    text-align: center;
+}
+
+table td:hover {
+    background-color: lightsteelblue;
+}
+
+.occupied {
+    background-color: lightgray;
+}
+
+.number-hit {
+    background-color: lightgreen;
+    transition: background-color 1000ms;
+}
+
+.table-title {
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: larger;
+}
+
+.called-number{
+    text-align: left;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: large;
+    font-weight: bold;
+}
+
+.table-winner {
+    border: solid red;
+}
