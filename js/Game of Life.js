@@ -71,7 +71,7 @@ function getNextState(grid) {
 function playTurn() {
 	var newGrid = []
 	newGrid = getNextState(gGrid)
-	renderGrid(newGrid)
+	renderGrid()
 	gGrid = newGrid
 }
 
