@@ -84,12 +84,14 @@ function getUniqueRandom(preDefinedList) {
 function createTableWithHeader(name) {
 	// Create the table element
 	const elTableContainer = document.querySelector(`.tbl-container`)
+	const elIndividualTable = document.createElement('div')
 	const elTitle = document.createElement('div')
 	const elTable = document.createElement('table')
 	elTitle.innerText = name
 	elTitle.classList.add('table-title')
-	elTableContainer.appendChild(elTitle)
-	elTableContainer.appendChild(elTable)
+	elTableContainer.appendChild(elIndividualTable)
+	elIndividualTable.appendChild(elTitle)
+	elIndividualTable.appendChild(elTable)
 	elTable.id = name
 	elTable.classList.add('bingo-table')
 
