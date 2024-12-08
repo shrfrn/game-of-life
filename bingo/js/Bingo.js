@@ -9,6 +9,10 @@ const LARGEST_NUMBER = 100
 const gPlayers = [
 	{ name: 'Mebahem', card: createCard(ROWS, COLS) },
 	{ name: 'Alberg' , card: createCard(ROWS, COLS) },
+	{ name: 'Zilber' , card: createCard(ROWS, COLS) },
+	{ name: 'Shaul', card: createCard(ROWS, COLS) },
+	{ name: 'Leybovich' , card: createCard(ROWS, COLS) },
+	{ name: 'Abram' , card: createCard(ROWS, COLS) },
 ]
 
 var gListNumbersInRange = initArray(SMALLEST_NUMBER, LARGEST_NUMBER)
