@@ -7,7 +7,7 @@ const EMPTY = ' '
 const LIFE = '😀'
 const SUPER_LIFE = '🍕'
 
-var gNumOfGeneretions = 30
+// var gNumOfGeneretions = 30
 
 var gGrid = createGrid(ROWS, COLS)
 var gGameInterval = null
@@ -47,7 +47,7 @@ function renderGrid() {
             const classStr = gGrid[i][j] === LIFE ? 'occupied' : ''
             strHtml += `\n\t<td 
                 onclick="onCellClicked(this, ${i}, ${j})" 
-                class="${classStr} cell-${i}-${j}">${gGrid[i][j]}</td>`
+                class="${classStr}" data-row="${i}" data-col="${j}">${gGrid[i][j]}</td>`
         }
         strHtml += `\n</tr>`
 	}
@@ -61,10 +61,12 @@ function onCellClicked(elCell, row, col) {
 
         // Model
         gGrid[row][col] = SUPER_LIFE
-        blowupNegs(elCell, row, col)
-
+        
         // DOM
         elCell.innerText = SUPER_LIFE
+        
+        // Both Model and DOM
+        blowupNegs(elCell, row, col)
     }
 }
 
@@ -80,7 +82,7 @@ function blowupNegs(elCell, row, col) {
             gGrid[i][j] = EMPTY
 
             // DOM
-            const elCell = document.querySelector(`.cell-${i}-${j}`)
+            const elCell = document.querySelector(`[data-row="${i}"][data-col="${j}"]`)
             elCell.innerText = EMPTY
         }
     }
@@ -108,10 +110,11 @@ function getNextState(grid) {
 }
 
 function playTurn() {
-	var newGrid = []
-	newGrid = getNextState(gGrid)
+	// var newGrid = []
+	// newGrid = getNextState(gGrid)
+	gGrid = getNextState(gGrid)
 	renderGrid()
-	gGrid = newGrid
+	// gGrid = newGrid
 }
 
 function countNeighbors(grid, x, y) {
